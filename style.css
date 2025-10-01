@@ -1,0 +1,205 @@
+/*styling*/
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #f9f9f9, #dceeff);
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Bar */
+/* Navigation styles */
+nav {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Hover effect */
+nav a:hover {
+  background-color: #333;
+  color: white;
+}
+
+
+
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  margin: 20px;
+}
+
+/* Hero Image */
+.hero {
+  text-align: center;
+  position: relative;
+}
+
+.hero img {
+  width: 90%;
+  border-radius: 10px;
+}
+
+.caption {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 5px 10px;
+}
+
+/* Paragraphs */
+.intro p {
+  width: 80%;
+  margin: 10px auto;
+  text-align: justify;
+}
+
+.pull-quote {
+  text-align: right;
+  font-style: italic;
+  color: gray;
+}
+
+/* About Page */
+.float-right {
+  float: right;
+  margin: 10px;
+  width: 200px;
+}
+
+blockquote {
+  background: #ccdefa;
+  border-left: 5px solid #004080;
+  padding: 10px;
+  margin: 20px;
+}
+
+/* Button */
+button {
+  background: #004080;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5accfd;
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border: 2px solid #004080;
+  border-radius: 5px;
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .intro p {
+    width: 95%;
+  }
+  .float-right {
+    float: none;
+    display: block;
+    margin: 15px auto;
+  }
+}
+
+/* Background Section */
+.hero {
+  height: 100vh; /* full screen height */
+  background: url("images/sea.jpg") center/cover no-repeat; /* your wallpaper image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: white; /* makes text visible */
+}
+
+.hero_before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay to make text pop */
+  z-index: 1;
+}
+
+.hero .overlay {
+  position: relative;
+  z-index: 2; /* keep text above overlay */
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 24px;
+}
+
+/* Slideshow container */
+.slideshow {
+  width: 70%;
+  max-width: 800px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Slides wrapper */
+.slides {
+  display: flex;
+  width: 70%;
+  animation: slide 20s infinite;
+}
+
+/* slideshow width each image is 50%*/
+.slides img {
+  width: 50%;
+  flex-shrink: 0;
+}
+
+/* Animation keyframes */
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-50%); }
+  50%  { transform: translateX(-100%); }
+  75%  { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
